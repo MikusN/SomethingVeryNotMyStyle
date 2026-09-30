@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cool">   
+            <img src="vtdt.jpg" class="image">
+        </div>
+        <div id="celebrateDiv" class="cool">
+           
+        </div>
+        <div class="cool">
+            <button id="barrelRollBtn">Do a Barrel Roll!</button>
+        </div>
+        <div class="cool">
+            <div class="ball">Yes</div>
+        </div>
+        <div class="notcoolenough">
+            <a href="https://www.youtube.com/">Youtube</a><br>
+            <a href="https://www.e-klase.lv/">E-klase</a><br>
+            <a href="https://mail.google.com/mail/">Gmail</a><br>
+            <a href="https://www.vtdt.lv/">VTDT</a><br>
+            <a href="https://www.1a.lv/">1a</a>
+        </div>
+        <div id="weatherDiv" class="cool"></div>
+        <div class="cool">
+            <form id="inputForm">
+                <label for="firstName">Vārds:</label>
+                <input type="text" id="firstName" pattern="[A-Za-zĀ-ž\s]+" required><br>
+
+                <label for="lastName">Uzvārds:</label>
+                <input type="text" id="lastName" pattern="[A-Za-zĀ-ž\s]+" required><br>
+
+                <label for="phone">Tālruņa numurs:</label>
+                <input type="tel" id="phone" name="phone" pattern="^\+?\d{8,12}$" placeholder="+371XXXXXXXX" required><br>
+
+                <label for="personalCode">Personas kods:</label>
+                <input type="text" id="personalCode" name="personalCode" pattern="^\d{6}-\d{5}$" placeholder="123456-12345" required><br>
+
+                <button type="submit">Pievienot lietotāju</button>
+            </form>
+        </div>
+        <div class="cool">
+            <select id="editUser" name="editUser" required>
+                <option value="">Izvēlieties lietotāju</option>
+            </select>
+
+            <form id="editForm"><button type="submit">Rediģēt lietotāju</button></form>
+        </div>
+        <div class="cool">
+            <form id="deleteForm">
+                <label for="deleteUser">Izvēlēties lietotāju dzēšanai:</label>
+            <select id="deleteUser" name="deleteUser" required>
+                <option value="">Izvēlieties lietotāju</option>
+            </select>
+                <button type="submit">Dzēst lietotāju</button>
+            </form>
+        </div>
+
+        <!--   <h2>Visi lietotāji:</h2>
+            <ul id="userList"></ul>--> 
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

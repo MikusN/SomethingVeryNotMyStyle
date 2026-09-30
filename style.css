@@ -1,0 +1,180 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0; /* Remove default body margin */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 500px 500px 500px;
+  height: 1000px;
+  width: 1500px;
+  background-color: #f1f1f1;
+}
+
+.container > div {
+  border: 1px solid black;
+  font-size: 30px;
+}
+
+.cool {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  text-align: center;
+  position: relative;      /* ensure proper child positioning */
+}
+
+.notcoolenough{
+  display: grid;
+  place-items: center;
+}
+
+/* Breathing bubble */
+.ball {
+  width: 10vh;     /* fixed width */
+  height: 10vh;    /* fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid green;
+  border-radius: 50%;
+  animation: breathe 8s linear infinite;
+  overflow: hidden;  /* prevent ball from overflowing */
+}
+
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);  /* Normal size */
+  }
+  33.333% {
+    transform: scale(2);  /* Grow the ball */
+  }
+}
+
+/* Style the image by default */
+.image {
+  background-color: red;  /* Set the background to red */
+  display: block;          /* Remove any inline-block behavior */
+  filter: grayscale(100%) brightness(0); /* Make it solid red */
+  transition: filter 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* When the image is hovered, bring back the original image color */
+.image:hover {
+  filter: none;           /* Remove the grayscale effect and return to original image */
+}
+
+/* Styling for links */
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: red;
+}
+
+a:hover {
+  color: green;
+}
+
+a:active {
+  color: yellow;
+}
+
+/* Button Styling */
+#barrelRollBtn {
+    padding: 20px 40px;
+    font-size: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* When the animation is triggered */
+@keyframes barrelRoll {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes barrelRolle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-90deg);
+    }
+    50% {
+        transform: rotate(-180deg);
+    }
+    75% {
+        transform: rotate(-270deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* Add the effect after the body is clicked */
+.barrel-rolling {
+    animation: barrelRoll 500ms ease-out;
+}
+.barrel-rolling2 {
+    animation: barrelRolle 500ms ease-out;
+}
+/* Confetti Styling */
+.confetti {
+    position: absolute;
+    top: -10px; /* Start slightly above the container */
+    opacity: 1;
+    animation: fall 5s infinite, float 2s infinite ease-in-out;
+}
+
+/* Keyframes for falling confetti */
+@keyframes fall {
+    0% {
+        top: -10px; /* Start above the container */
+        opacity: 1;
+    }
+    100% {
+        top: 100%; /* End at the bottom of the container */
+        opacity: 1;
+    }
+}
+
+/* Keyframes for floating confetti (wiggling effect) */
+@keyframes float {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Styling the weather info */
+#weatherDiv {
+  font-size: 40px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
